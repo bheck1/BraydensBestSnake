@@ -9,12 +9,18 @@ OCCUPIED   = -1
 FOOD       = 1
 HEAD       = -2
 TAIL       = 4
-HEALTHLIM = 25
+HEALTHLIM = 100
 game_state = ""
 directions = {'up': 0, 'down': 0, 'left': 0, 'right': 0}
 
 
 def calculate_move(board_matrix, game_state):
+
+	if len(game["you"]["body"]) < 5 :
+		HEALTHLIM = 100
+	else:
+		HEALTHLIM = 5
+
     set_game_state(game_state)
     height = game_state["board"]["height"]
     head = game_state['you']["body"][0]
