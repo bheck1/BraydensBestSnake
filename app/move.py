@@ -16,7 +16,7 @@ directions = {'up': 0, 'down': 0, 'left': 0, 'right': 0}
 
 def calculate_move(board_matrix, game_state):
 
-    if len(game_state["you"]["body"]) < 5 :
+    if len(game_state["you"]["body"]) < 8 :
         HEALTHLIM = 100
     else:
         HEALTHLIM = 5
