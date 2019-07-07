@@ -19,7 +19,7 @@ def calculate_move(board_matrix, game_state):
     if len(game_state["you"]["body"]) < 8 :
         HEALTHLIM = 100
     else:
-        HEALTHLIM = 5
+        HEALTHLIM = 20
 		
     set_game_state(game_state)
     height = game_state["board"]["height"]
