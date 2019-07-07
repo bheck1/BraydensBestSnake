@@ -22,7 +22,7 @@ def calculate_move(board_matrix, game_state):
 		HEALTHLIM = 5
  	
  
- set_game_state(game_state)
+set_game_state(game_state)
     height = game_state["board"]["height"]
     head = game_state['you']["body"][0]
     x = head["x"]
