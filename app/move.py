@@ -9,15 +9,17 @@ OCCUPIED   = -1
 FOOD       = 1
 HEAD       = -2
 TAIL       = 4
-HEALTHLIM = 25
+HEALTHLIM = 100
 game_state = ""
 directions = {'up': 0, 'down': 0, 'left': 0, 'right': 0}
 
 
 def calculate_move(board_matrix, game_state):
 
-    if len(game_state["you"]["body"]) < 8 :
+    if len(game_state["you"]["body"]) < 6 :
         HEALTHLIM = 100
+	elif len(game_state["you"]["body"]) < 10 :
+		HEALTHLIM = 50
     else:
         HEALTHLIM = 20
 		
